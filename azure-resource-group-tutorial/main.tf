@@ -1,9 +1,9 @@
 # Configure Azure provider
 terraform {
   backend "remote" {
-    organization = var.organization_name
+    organization = "colinphillips-mock"
     workspaces {
-        name = var.workspace_name
+        name = "Azure-RG-VN-State"
     }
   }
 

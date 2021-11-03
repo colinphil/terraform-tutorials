@@ -3,7 +3,3 @@ variable "rg_name" {
   type        = string
   default     = "ExampleResourceGroup"
 }
-
-variable "organization_name" { }
-
-variable "workspace_name" { }
