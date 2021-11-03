@@ -1,0 +1,4 @@
+# Ignore TF downloads, backups
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.backup
