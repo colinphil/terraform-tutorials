@@ -1,9 +1,9 @@
 # Configure AWS EC2 Instance
 terraform {
   backend "remote" {
-    organization = "colinphillips-mock" 
+    organization = var.organization_name
     workspaces {
-        name = "AWS-EC2-State"
+        name = var.workspace_name
     }
   }
 
