@@ -1,9 +1,9 @@
 # Configure AWS EC2 Instance
 terraform {
   backend "remote" {
-    organization = var.organization_name
+    organization = "colinphillips-mock"
     workspaces {
-        name = var.workspace_name
+        name = "AWS-EC2-State"
     }
   }
 
@@ -28,5 +28,15 @@ resource "aws_instance" "app_server" {
 
   tags = {
     Name = var.instance_name
+  }
+}
+
+resource "aws_s3_bucket" "b" {
+  bucket = var.s3_name
+  acl    = "private"
+
+  tags = {
+    Name        = var.s3_tag_name
+    Environment = "Dev"
   }
 }
