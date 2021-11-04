@@ -28,7 +28,7 @@ The infrastructure configuration is defined in Terraform files that all end in `
 In each project, there will be certain files that are relevant. A description is provided of each:
 
 - `{name}.tf`: A Terraform configuration file - this defines the desired intrastructure.
-- `.terraform`: Directory that contains downloaded providers' files
+- `.terraform`: Directory that contains downloaded providers' files and modules
 - `.terraform.lock.hcl`: This file records the provider versions to ensure consistency in project creation and sharing
 - `terraform.tfstate`: This file contain's the local project's state - this is used for tracking the generated resources and creation of execution plans
 - `terraform.tfstate.lock.info`: A temporary file created during applying/deleting a configuration. 
